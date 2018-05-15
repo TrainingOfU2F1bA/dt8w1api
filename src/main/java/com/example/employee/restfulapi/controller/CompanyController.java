@@ -34,7 +34,7 @@ public class CompanyController {
 
 
     @GetMapping(COMPANIES_ID)
-    public Company find(Long id) {
+    public Company find(@PathVariable Long id) {
         return null;
     }
 

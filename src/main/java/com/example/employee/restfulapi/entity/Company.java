@@ -1,5 +1,9 @@
 package com.example.employee.restfulapi.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.annotation.JsonTypeResolver;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.util.HashMap;
@@ -16,10 +20,8 @@ public class Company {
     private Integer employeesNumber;
     @OneToMany
     @JoinColumn(name="company_id")
+    @JsonIgnore
     private Map<Long,Employee> employeeMap=new HashMap<>();
-
-    public Company() {
-    }
 
     public Company(String companyName, Integer employeesNumber) {
         this.companyName = companyName;
@@ -48,5 +50,16 @@ public class Company {
 
     public void setEmployeesNumber(Integer employeesNumber) {
         this.employeesNumber = employeesNumber;
+    }
+
+    public Company() {
+    }
+
+    public Map<Long, Employee> getEmployeeMap() {
+        return employeeMap;
+    }
+
+    public void setEmployeeMap(Map<Long, Employee> employeeMap) {
+        this.employeeMap = employeeMap;
     }
 }

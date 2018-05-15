@@ -3,11 +3,13 @@ package com.example.employee.restfulapi.aspect;
 import com.example.employee.restfulapi.service.CompanyService;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
+import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
-//@Aspect
-//@Component
+@Aspect
+@Component
 public class CompanyAspect extends BaseAspect{
     public static final String EXECUTION_COM_EXAMPLE_EMPLOYEE_RESTFULAPI_CONTROLLER_COMPANY_CONTROLLER
             = "execution(* com.example.employee.restfulapi.controller.CompanyController.*(..))";
