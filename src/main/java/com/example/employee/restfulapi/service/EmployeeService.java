@@ -1,4 +1,9 @@
 package com.example.employee.restfulapi.service;
 
-public interface EmployeeService {
+import com.example.employee.restfulapi.entity.Employee;
+
+import java.util.List;
+
+public interface EmployeeService extends BaseService<Employee>{
+    public List<Employee> listWithGender(String gender);
 }
