@@ -2,7 +2,9 @@ package com.example.employee.restfulapi.entity;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 
 @Entity
@@ -12,6 +14,9 @@ public class Company {
     private Long id;
     private String companyName;
     private Integer employeesNumber;
+    @OneToMany
+    @JoinColumn(name="company_id")
+    private Map<Long,Employee> employeeMap=new HashMap<>();
 
     public Company() {
     }
