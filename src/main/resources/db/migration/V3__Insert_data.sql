@@ -13,7 +13,7 @@ INSERT INTO Employee (id,name,age,gender,companyId,salary) VALUES ( 5, 'alibaba2
 INSERT INTO Employee (id,name,age,gender,companyId,salary) VALUES ( 6, 'alibaba3',19,'male',2,8000 );
 
 INSERT INTO Employee (id,name,age,gender,companyId,salary) VALUES ( 7, 'ThoughtWorks1',20,'male',3,6000 );
-INSERT INTO Employee (id,name,age,gender,companyId,salary) VALUES ( 8, 'ThoughtWorks2',19,'female',3,7000 );
+INSERT INTO Employee (id,name,age,gender,companyId,salary) VALUES ( 9, 'ThoughtWorks2',19,'female',3,7000 );
 INSERT INTO Employee (id,name,age,gender,companyId,salary) VALUES ( 9, 'ThoughtWorks3',19,'male',3,8000 );
 
 
