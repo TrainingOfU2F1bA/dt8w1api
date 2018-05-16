@@ -1,8 +1,6 @@
 package com.example.employee.restfulapi.controller;
 
 import com.example.employee.restfulapi.entity.Employee;
-import com.example.employee.restfulapi.service.EmployeeService;
-import org.springframework.data.domain.Page;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -16,41 +14,41 @@ public class EmployeeController {
     public static final String GENDER = "employees/{gender:female|male}";
 
     @GetMapping(GENDER)
-    public List<Employee> listWithGender(String gender) {
+    public List<Employee> listWithGender(@PathVariable String gender) {
         return null;
     }
 
 
-    @GetMapping
+    @GetMapping(EMPLOYEES)
     public List<Employee> list() {
         return null;
     }
 
 
     @DeleteMapping(ID)
-    public void delete(Long id) {
+    public void delete(@PathVariable Long id) {
 
     }
 
 
     @GetMapping(ID)
-    public Employee find(Long id) {
+    public Employee find(@PathVariable Long id) {
         return null;
     }
 
 
     @GetMapping(PAGE_PAGE_NUM_PAGE_SIZE_PAGE_SIZE)
-    public Page<Employee> pages(int pageNum, int pageSize) {
+    public Object pages(@PathVariable int pageNum,@PathVariable int pageSize) {
         return null;
     }
 
 
-    @PutMapping
+    @PutMapping(EMPLOYEES)
     public void update(@RequestBody Employee employee) {
 
     }
 
-    @PostMapping
+    @PostMapping(EMPLOYEES)
     public void add(@RequestBody Employee employee) {
 
     }

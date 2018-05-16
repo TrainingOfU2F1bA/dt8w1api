@@ -18,8 +18,9 @@ public class Company {
     private Long id;
     private String companyName;
     private Integer employeesNumber;
-    @OneToMany
-    @JoinColumn(name="company_id")
+    @OneToMany(cascade = CascadeType.ALL,fetch = FetchType.LAZY,orphanRemoval = true)
+    @JoinColumn(name="companyId",insertable = false,updatable = false)
+    @MapKeyColumn(name="id")
     @JsonIgnore
     private Map<Long,Employee> employeeMap=new HashMap<>();
 
